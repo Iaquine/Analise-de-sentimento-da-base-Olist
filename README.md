@@ -1,7 +1,7 @@
 # Analise de sentimentos da base Olist
 # Classificação de Sentimentos em Textos com Redes Neurais Recorrentes
 
-Este projeto utiliza Redes Neurais Recorrentes (RNNs) para classificar o sentimento em avaliações de clientes de um e-commerce brasileiro.
+Este projeto utiliza Redes Neurais Recorrentes (RNNs) para classificar o sentimento em avaliações de clientes de um e-commerce brasileiro. O objetivo é identificar se o sentimento é positivo, negativo ou neutro, com base no texto da avaliação.
 
 ## Descrição do Dataset
 
@@ -31,6 +31,14 @@ O arquivo CSV contém as seguintes colunas:
 
 ## Detalhes das Colunas
 
+- **review_comment_title**: Título do comentário de avaliação fornecido pelo cliente, se presente.
+
+- **review_comment_message**: Texto completo da avaliação ou feedback do cliente, onde ele pode expressar sua satisfação ou insatisfação com o produto ou serviço.
+
+- **review_creation_date**: A data em que a avaliação foi criada.
+
+- **review_answer_timestamp**: A data e hora em que a avaliação foi respondida (se aplicável).
+
 - **review_id**: Identificador único para cada avaliação de pedido. É útil para rastrear avaliações individuais.
   
 - **order_id**: Identificador do pedido ao qual a avaliação está associada. Isso conecta a avaliação aos detalhes do pedido e ao cliente.
@@ -41,15 +49,17 @@ O arquivo CSV contém as seguintes colunas:
   - 3: Neutro
   - 4: Satisfeito
   - 5: Muito satisfeito
-  
-- **review_comment_title**: Título do comentário de avaliação fornecido pelo cliente, se presente.
 
-- **review_comment_message**: Texto completo da avaliação ou feedback do cliente, onde ele pode expressar sua satisfação ou insatisfação com o produto ou serviço.
+-**OBS**: Como o conjunto de dados contém pontuações de 1 a 5, o modelo foi adaptado para classificar as avaliações em seis categorias, de 0 a 5, representando a intensidade do sentimento. As categorias podem ser interpretadas da seguinte forma:
 
-- **review_creation_date**: A data em que a avaliação foi criada.
+- 0: Sentimento muito negativo
+- 1: Sentimento negativo
+- 2: Sentimento levemente negativo
+- 3: Sentimento neutro
+- 4: Sentimento levemente positivo
+- 5: Sentimento positivo
 
-- **review_answer_timestamp**: A data e hora em que a avaliação foi respondida (se aplicável).
-
+- Essa classificação em seis categorias permite uma análise mais granular dos sentimentos expressos nas avaliações, indo além da simples classificação em positivo, negativo ou neutro.
 
 ## Pré-processamento dos Dados
 
