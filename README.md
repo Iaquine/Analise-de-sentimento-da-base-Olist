@@ -67,8 +67,8 @@ O pré-processamento dos dados inclui as seguintes etapas:
 
 1.  Remover caracteres especiais
 2.  Converter o texto para minúsculas
-3.  Aplicar stemming (opcional)
-4.  Remover stop words (opcional)
+3.  Aplicar stemming
+4.  Remover stop words 
 
 ## Modelagem
 
@@ -78,8 +78,6 @@ Os seguintes tipos de modelos RNN são utilizados:
 *   GRU
 *   Stacked LSTM
 
-Os hiperparâmetros dos modelos são ajustados usando o Hyperband.
-
 ## Avaliação
 
 Os modelos são avaliados com base nas seguintes métricas:
@@ -88,7 +86,6 @@ Os modelos são avaliados com base nas seguintes métricas:
 *   Precisão
 *   Recall
 *   F1-score
-*   AUC-ROC
 
 ## Resultados
 
@@ -96,4 +93,4 @@ Os resultados da avaliação dos modelos são apresentados em gráficos de barra
 
 ## Conclusões
 
-O projeto demonstra como utilizar RNNs para classificar sentimentos em textos. Os resultados mostram que as RNNs podem alcançar um bom desempenho nesta tarefa.
+O projeto demonstra como utilizar RNNs para classificar sentimentos em textos. Os resultados mostram que as RNNs podem alcançar um bom desempenho nesta tarefa usando o GRU.
